@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>My HackPiano Project!</title>
+</head>
+<body>
+	<div class="content">
+		<h1>HackPiano</h1>
+		<h2>What is HackPiano?</h2>
+		<p>
+			The HackPiano is a MIDI-compatible piano made like a custom keyboard as my Hack Club <a href="https://highway.hackclub.com" target="_blank">Highway</a> project.
+		</p>
+		<span class="repo-link">Repo link: <a href="https://github.com/tinkering-townsperson/HackPiano" target="_blank"><img src="./assets/github-mark-white.svg" alt="Github Logo">https://github.com/tinkering-townsperson/HackPiano</a></span>
+		<h2>How did I make it?</h2>
+		<h3>Schematic/PCB</h3>
+		<p>
+			I used <a href="http://kicad.org">KiCad</a> to make the schematic, and then assigned footprints to the symbols and imported the components onto the PCB. After moving them around a little, I routed the PCB.
+		</p>
+		<img src="./assets/schematic.png" alt="Schematic" class="gallery">
+		<img src="./assets/pcb-design.png" alt="PCB Design" class="gallery">
+		<img src="./assets/pcb-render-front.png" alt="PCB Render (front)" class="gallery">
+		<img src="./assets/pcb-render-back.png" alt="PCB Render (back)" class="gallery">
+		<h3>Case</h3>
+		<p>
+			I Made the case in <a href="https://www.autodesk.com/products/fusion-360" target="_blank">Autodesk Fusion</a>. First I made my keyboard layout and exported it as a DHX file. I then imported it into Fusion.
+		</p>
+		<img src="./assets/case-bottom.png" alt="Case (bottom)" class="gallery">
+		<img src="./assets/case-top.png" alt="Case (top)" class="gallery">
+		<h3>Firmware</h3>
+		<p>
+			I wrote the firmware for this project in <a href="http://python.org/" target="_blank">Python</a>. I had to make a custom subclass that inherited from <code>kmk.kmkkeyboard.KMKKeyboard</code> and used the <code>adafruit_midi</code> library to send MIDI signals.
+		</p>
+		<img src="./assets/firmware.png" alt="Screenshot of code." style="width: 80%; display: block; margin: auto;">
+	</div>
+</body>
+</html>
